@@ -30,7 +30,7 @@ php:
     MEMCACHED_HOST: cache
     CACHE_DRIVER: memcached
 mysql:
-  image: mysql
+  image: mysql:5.7
   container_name: catalogues
   volumes:
     - ./images/mysql/data/:/var/lib/mysql
