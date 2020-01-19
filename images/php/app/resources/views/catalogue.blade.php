@@ -20,8 +20,7 @@
           </div>
           <div class="h2 pl-3 pr-4 justify-content-start" style="border-left:2px solid #333;">MyFlix</div>
        </a>
-       <div class="h5 pr-5 d-flex justify-content-end"><a href="/">Home</div></a>
-
+      <div class="h5 pr-5 d-flex justify-content-end"><a href="/">Home</a></div>
        <div id="app">
            <div class="pt-1 text-center">
               <div class="pb-3" style="font-size:160%;">
