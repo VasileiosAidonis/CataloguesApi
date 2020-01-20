@@ -20,7 +20,10 @@
           </div>
           <div class="h2 pl-3 pr-4 justify-content-start" style="border-left:2px solid #333;">MyFlix</div>
        </a>
-      <div class="h5 pr-5 d-flex justify-content-end"><a href="/">Home</a></div>
+       <a class="navbar-brand d-flex">
+         <div class="h4 d-flex justify-content-end" style="margin-right: 3%;"> <a href="/logins1" style=" padding:4px; padding-bottom:5px; background-color: #660B32; color:white; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.15); opacity:94%; text-decoration: none; border:1px solid #240311; border-radius:8px;"> Logout</a></div>
+         <div class="h5 pr-5 pb-1 d-flex justify-content-end"><a href="/">Home</a></div>
+       </a>
        <div id="app">
            <div class="pt-1 text-center">
               <div class="pb-3" style="font-size:160%;">
