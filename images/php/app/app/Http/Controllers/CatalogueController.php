@@ -60,6 +60,7 @@ class CatalogueController extends Controller
     {
          $rules =[
            'name' => 'required|max:255',
+           'thumbnail' =>'required',
          ];
 
          $this->validate($request, $rules);
@@ -76,9 +77,6 @@ class CatalogueController extends Controller
     */
     public function show($catalogues)
     {
-        //$catalogues = Catalogue::where('id', 1)->first();
-        //dd($catalogues->where('id', 3)->first()->name);
-
         $catalogues = Catalogue::findOrFail($catalogues);
 
         return $this->successResponse($catalogues);
@@ -91,7 +89,8 @@ class CatalogueController extends Controller
     public function update(Request $request, $catalogue)
     {
         $rules =[
-         'name' => 'required|max:255',
+         'name' => 'max:255',
+         'thumbnail' => '',
         ];
 
         $this->validate($request, $rules);
@@ -110,6 +109,33 @@ class CatalogueController extends Controller
         return $this->successResponse($catalogue);
     }
 
+    /**
+    * Update the thumbnail
+    * @return Illuminate\Http\Response
+    */
+    public function update_thumb(Request $request, $thumb, $catalogues)
+    {
+        $user_username = $catalogues;
+
+        $catalogues = $thumb;
+
+        $catalogues = Catalogue::findOrFail($catalogues);
+
+        if ($catalogues->thumbnail == false){
+
+              $catalogues->thumbnail = true;
+        } else{
+
+              $catalogues->thumbnail = false;
+        }
+
+        $catalogues->save();
+
+         return view('catalogue', [
+              'catalogue' => $catalogues,
+              'user' => $user_username,
+         ]);
+    }
 
     /**
     * Delete a name in catalague
